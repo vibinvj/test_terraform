@@ -23,6 +23,19 @@ variable "pub_subnet" {
   description = "pub sub"
   type = string
 }
+variable "pri_subnet" {
+  description = "pri sub"
+  type = string
+}
+
+variable "pri_sub_tag" {
+  description = "tag pri"
+  type = object({
+    name = string
+    env = string
+  })
+}
+
 variable "ins_type" {
   description = "declare ins type"
   type = string
@@ -40,4 +53,40 @@ variable "pub-sub-tag" {
     name = string
     env = string
   })
+}
+variable "devvpc" {
+  description = "dev vpc"
+  type = string
+}
+variable "vpc-tag" {
+  description = "vpc tag"
+  type = object({
+    name = string
+    env = string
+  })
+}
+
+variable "devigw" {
+  description = "dev igw"
+  type = object({
+    name = string
+    env = string
+  })
+}
+variable "routetag" {
+  description = "route tag"
+  type = object({
+    name = string
+    env = string
+  })
+}
+
+variable "pub_pri_Ip" {
+  description = "used for pub ins pri ip"
+  type = string
+}
+
+variable "pri_pri_Ip" {
+  description = "used for pri ip"
+  type = string
 }

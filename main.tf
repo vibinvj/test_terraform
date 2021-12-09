@@ -95,6 +95,7 @@ resource "aws_instance" "glb_ins" {
   vpc_security_group_ids = ["${aws_security_group.glb_sg.id}"]
   iam_instance_profile = aws_iam_instance_profile.glb_ins_profile.id
   associate_public_ip_address = true
+  user_data = "${file("docker-install.sh")}"
   key_name = aws_key_pair.glb_keypair.key_name
   #  security_groups = ["${aws_security_group.glb_sg.name}"]
   tags = var.ins-tag

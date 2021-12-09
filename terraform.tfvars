@@ -5,9 +5,9 @@ ins-tag = {
   env = "dev"
   version = 1.0
 }
-devami = "ami-04ad2567c9e3d7893"
+devami = "ami-0b0af3577fe5e3532"
 pub_subnet = "10.0.1.0/24"
-ins_type = "t2.micro"
+ins_type = "t2.small"
 sg-tag = {
   name = "devsg"
   env = "dev"
